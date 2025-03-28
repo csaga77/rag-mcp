@@ -28,6 +28,7 @@ def get_godot_context(query: str) -> list:
         results = collection.query(
             query_embeddings=model.encode([query]).astype(float).tolist(), n_results=20)
         
+        # based on your data, you may include other info such as metadata, etc.
         documents = results["documents"][0][:]
         
         return documents
