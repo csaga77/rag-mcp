@@ -1,0 +1,11 @@
+[project]
+name = "rag-mcp"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "chromadb>=0.6.3",
+    "mcp[cli]>=1.6.0",
+    "sentence-transformers>=4.0.1",
+]
