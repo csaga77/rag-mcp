@@ -1,4 +1,4 @@
-# Godot RAG MCP Tool
+# Godot RAG MCP
 
 A Model Context Protocol (MCP) tool that retrieves relevant information about Godot game engine from a local ChromaDB database.
 
