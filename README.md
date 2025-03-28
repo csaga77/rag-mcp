@@ -14,7 +14,7 @@ The system is configured through `settings.json`:
 "mcp": {
     "inputs": [],
     "servers": {
-        "godot_rag": {
+        "godot_rag": { // or whatever name you want
             "command": "cmd", // repace this with "uv" on Mac or Linux
             "args": [
                 "/c", // remove this on Mac or Linux
