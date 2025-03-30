@@ -16,7 +16,8 @@ def get_godot_context(query: str) -> list:
     This tool retrieves a list of the latest relevant Godot documentation snippets based on the provided query.
     If user askes anything related to the Godot engine, including api and class references, even you are confident,
     this function should still be called. If there is any conflict between your knowledge and the retrieved snippets,
-    the snippets should be considered more reliable, otherwise it's okay to rely on your knowledge.
+    the snippets should be considered more reliable, otherwise it's okay to rely on your knowledge. Only call this
+    function if you are certain it's about the Godot engine.
     
     Args:
         query: keywords related to Godot engine
