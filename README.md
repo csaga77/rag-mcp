@@ -2,7 +2,7 @@
 
 A Model Context Protocol (MCP) tool that retrieves relevant information about Godot game engine from a local ChromaDB database.
 
-It's recommended to use the [website2embeddings](https://github.com/zivshek/website2embeddings) tool to create the chroma vector store.
+It's recommended to use the [web2embeddings](https://github.com/zivshek/web2embeddings) tool to create the chroma vector store.
 
 Although this tool is for Godot in particular, but with small changes to the tool description, it can be used for any chroma database.
 
@@ -20,11 +20,11 @@ The system is configured through `settings.json`:
                 "/c", // remove this on Mac or Linux
                 "uv", // remove this on Mac or Linux
                 "run",
-                "path to the server script 'server.py'",
+                "path to the server script 'server.py'", // C:\\dev\\rag-mcp\\server.py
                 "-d",
-                "path to the chroma_db on your computer",
+                "path to the chroma_db on your computer", // C:\\dev\\web2embeddings\\artifacts\\vector_stores\\chroma_db
                 "-c",
-                "name of the collection in the chroma_db"
+                "name of the collection in the chroma_db" // godotengine_chunks_SZ_400_O_20_all-MiniLM-L6-v2
             ]
         }
     }
