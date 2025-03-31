@@ -2,11 +2,17 @@
 
 A Model Context Protocol (MCP) tool that retrieves relevant information about Godot game engine from a local ChromaDB database.
 
-It's recommended to use the [web2embeddings](https://github.com/zivshek/web2embeddings) tool to create the chroma vector store.
-
 Although this tool is for Godot in particular, but with small changes to the tool description, it can be used for any chroma database.
 
-## Configuration with Visual Studio Code
+## Usage
+
+- Get the chroma_db vector store ready using the [web2embeddings](https://github.com/zivshek/web2embeddings) tool.
+- Download or clone this repository to your local disk.
+- Configure the MCP server in VSCode Insiders (see below config instructions).
+
+## Configuration with Visual Studio Code Insiders
+
+**_NOTE:_** You may need to download [**Visual Studio Code Insiders**](https://code.visualstudio.com/insiders/) version to use MCP or Agent mode.
 
 The system is configured through `settings.json`:
 
