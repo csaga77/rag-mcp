@@ -21,7 +21,7 @@ The system is configured through `settings.json`:
     "inputs": [],
     "servers": {
         "godot_rag": { // or whatever name you want
-            "command": "cmd", // repace this with "uv" on Mac or Linux
+            "command": "cmd", // replace this with "uv" on Mac or Linux
             "args": [
                 "/c", // remove this on Mac or Linux
                 "uv", // remove this on Mac or Linux
