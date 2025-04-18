@@ -21,11 +21,11 @@ The system is configured through `settings.json`:
     "inputs": [],
     "servers": {
         "godot_rag": { // or whatever name you want
-            "command": "cmd", // replace this with "uv" on Mac or Linux
+            "command": "cmd", // replace this with "uv" on Mac or Linux, use "path to local uv virtual environment folder, for example ~/.venv/bin/python"
             "args": [
                 "/c", // remove this on Mac or Linux
                 "uv", // remove this on Mac or Linux
-                "run",
+                "run", // remove this if command is <path to local uv virtual envionrment folder>/bin/python
                 "path to the server script 'server.py'", // C:\\dev\\rag-mcp\\server.py
                 "-d",
                 "path to the chroma_db on your computer", // C:\\dev\\web2embeddings\\artifacts\\vector_stores\\chroma_db
