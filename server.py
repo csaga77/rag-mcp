@@ -39,14 +39,23 @@ def get_godot_context(query: str) -> list:
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description='Start the Godot RAG MCP Server')
-    parser.add_argument('--chromadb-path', '-d', type=str, required=True,
-                        help='Path to the ChromaDB database')
-    parser.add_argument('--collection-name', '-c', type=str, required=True,
-                        help='Name of the ChromaDB collection to query')
+    parser.add_argument('--chromadb-path', '-d', type=str, 
+                        help='Path to the ChromaDB database',
+                        default="../web2embeddings/artifacts/vector_stores/chroma_db")
+    parser.add_argument('--collection-name', '-c', type=str, 
+                        help='Name of the ChromaDB collection to query',
+                        default="godotengine_chunks_SZ_400_O_20_all-MiniLM-L6-v2")
     
     args = parser.parse_args()
     
     client = chromadb.PersistentClient(path=args.chromadb_path)
+    # Retrieve the list of collections
+    collections = client.list_collections()
+
+    # Print the collections
+    for collection in collections:
+        print(collection)
+
     collection = client.get_collection(args.collection_name)
     
     mcp.run(transport="stdio")
